@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tandoori Tea & Co. | Gulberg III, Lahore</title>
+    
+    <!-- Meta tags for SEO & Presentation -->
+    <meta name="description" content="Tandoori Tea & Co. - Café, tea house, and restaurant located in Gulberg III, Lahore, Pakistan. Enjoy artisanal clay-pot chai, continental food, burgers, pasta, and vibrant café atmosphere.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#14100E',
+                            card: '#1D1714',
+                            clay: '#C85A32',
+                            terracotta: '#A6421E',
+                            copper: '#D9822B',
+                            amber: '#F2A03D',
+                            cream: '#F7EFE8',
+                            muted: '#A3958B',
+                            border: '#332923'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Tandoori Tea & Co.",
+      "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=1200",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "6-A3 Mian Mehmood Ali Kasoori Road, Block A-3",
+        "addressLocality": "Gulberg III, Lahore",
+        "addressRegion": "Punjab",
+        "addressCountry": "Pakistan"
+      },
+      "telephone": "+923224735745",
+      "servesCuisine": ["Tea", "Café", "Pakistani", "Continental", "Fast Food"],
+      "priceRange": "$$",
+      "url": "https://www.instagram.com/tandooriteaco/"
+    }
+    </script>
+
+    <style>
+        body {
+            background-color: #14100E;
+            color: #F7EFE8;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #14100E;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #332923;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #C85A32;
+        }
+
+        /* Ambient Steam Animation */
+        @keyframes steamRise {
+            0% {
+                transform: translateY(0) scaleX(1);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(-40px) scaleX(1.5);
+                opacity: 0;
+            }
+        }
+
+        .steam-particle {
+            position: absolute;
+            background: rgba(255, 230, 210, 0.25);
+            border-radius: 50%;
+            filter: blur(8px);
+            animation: steamRise 3.5s infinite ease-in-out;
+        }
+
+        /* Glow Effects */
+        .tandoor-glow {
+            box-shadow: 0 0 50px -10px rgba(200, 90, 50, 0.3);
+        }
+
+        .copper-border {
+            border: 1px solid rgba(217, 130, 43, 0.25);
+        }
+
+        .copper-border:hover {
+            border-color: rgba(217, 130, 43, 0.6);
+        }
+
+        /* Hide Scrollbar for Horizontal Filter Tabs */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-clay selection:text-white">
+
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-brand-dark/90 backdrop-blur-md border-b border-brand-border/60" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo -->
+            <a href="#home" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-full bg-gradient-to-br from-brand-terracotta to-brand-amber flex items-center justify-center text-brand-dark font-serif font-bold text-xl shadow-lg group-hover:scale-105 transition-transform">
+                    <i class="fa-solid font-bold fa-mug-hot text-brand-dark text-lg"></i>
+                </div>
+                <div>
+                    <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-brand-cream block leading-none">
+                        Tandoori Tea <span class="text-brand-amber">&</span> Co.
+                    </span>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-muted block mt-1 font-medium">Gulberg III · Lahore</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-brand-cream/80">
+                <a href="#home" class="hover:text-brand-amber transition-colors">Home</a>
+                <a href="#story" class="hover:text-brand-amber transition-colors">Our Story</a>
+                <a href="#signature" class="hover:text-brand-amber transition-colors">Signature Chai</a>
+                <a href="#menu" class="hover:text-brand-amber transition-colors">Menu</a>
+                <a href="#favourites" class="hover:text-brand-amber transition-colors">Favourites</a>
+                <a href="#gallery" class="hover:text-brand-amber transition-colors">Gallery</a>
+                <a href="#location" class="hover:text-brand-amber transition-colors">Location</a>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="#menu" class="px-4 py-2 rounded-lg text-sm font-semibold bg-brand-card hover:bg-brand-border text-brand-cream transition-all border border-brand-border">
+                    Explore Menu
+                </a>
+                <a href="https://www.foodpanda.pk/restaurant/w1zj/tandoori-tea-and-co" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg text-sm font-semibold bg-gradient-to-r from-brand-clay to-brand-amber hover:brightness-110 text-brand-dark shadow-md hover:shadow-brand-clay/20 transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-bag-shopping"></i> Order Online
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg text-brand-cream hover:bg-brand-card focus:outline-none border border-brand-border/50">
+                <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobileDrawer" class="hidden lg:hidden bg-brand-card border-b border-brand-border px-6 py-6 transition-all">
+            <div class="flex flex-col gap-4 text-brand-cream text-base font-medium">
+                <a href="#home" class="mobile-link py-2 border-b border-brand-border/40 hover:text-brand-amber">Home</a>
+                <a href="#story" class="mobile-link py-2 border-b border-brand-border/40 hover:text-brand-amber">Our Story</a>
+                <a href="#signature" class="mobile-link py-2 border-b border-brand-border/40 hover:text-brand-amber">Signature Chai</a>
+                <a href="#menu" class="mobile-link py-2 border-b border-brand-border/40 hover:text-brand-amber">Full Menu</a>
+                <a href="#favourites" class="mobile-link py-2 border-b border-brand-border/40 hover:text-brand-amber">Popular Favourites</a>
+                <a href="#gallery" class="mobile-link py-2 border-b border-brand-border/40 hover:text-brand-amber">Gallery</a>
+                <a href="#location" class="mobile-link py-2 border-b border-brand-border/40 hover:text-brand-amber">Location & Contact</a>
+                <div class="pt-4 flex flex-col gap-3">
+                    <a href="https://www.foodpanda.pk/restaurant/w1zj/tandoori-tea-and-co" target="_blank" rel="noopener noreferrer" class="w-full text-center py-3 rounded-lg text-sm font-semibold bg-brand-clay text-white shadow-md">
+                        Order via Foodpanda
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="relative min-h-screen pt-28 pb-16 flex items-center justify-center overflow-hidden bg-gradient-to-b from-brand-dark via-brand-dark to-brand-card">
+        <!-- Background Decorative Elements -->
+        <div class="absolute inset-0 z-0 opacity-30 pointer-events-none">
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-brand-terracotta/20 rounded-full filter blur-[120px]"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-brand-amber/15 rounded-full filter blur-[100px]"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left Text Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-clay/15 border border-brand-clay/30 text-brand-amber text-xs font-semibold tracking-wider uppercase">
+                        <i class="fa-solid fa-fire text-brand-clay"></i> Traditional Clay Pot Tandoori Chai
+                    </div>
+                    
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-cream leading-tight">
+                        Your Perfect <br class="hidden sm:inline" />
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-amber via-brand-copper to-brand-clay">
+                            Chai Moment.
+                        </span>
+                    </h1>
+                    
+                    <p class="text-brand-muted text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        From comforting traditional chai baked in scorching clay pots to flavourful continental meals, discover a welcoming place in Gulberg III to unwind, connect, and enjoy great food with friends and family.
+                    </p>
+
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#menu" class="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold bg-gradient-to-r from-brand-clay to-brand-copper hover:from-brand-terracotta hover:to-brand-clay text-white shadow-xl shadow-brand-clay/20 transition-all text-center flex items-center justify-center gap-2 group">
+                            Explore Our Menu
+                            <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#location" class="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold bg-brand-card hover:bg-brand-border text-brand-cream border border-brand-border transition-all text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-location-dot text-brand-amber"></i> Find Us in Lahore
+                        </a>
+                    </div>
+
+                    <!-- Highlight Badges -->
+                    <div class="pt-8 grid grid-cols-3 gap-4 border-t border-brand-border/60 max-w-lg mx-auto lg:mx-0 text-left">
+                        <div>
+                            <div class="text-brand-amber font-serif font-bold text-xl sm:text-2xl">Gulberg III</div>
+                            <div class="text-brand-muted text-xs">Prime Location</div>
+                        </div>
+                        <div>
+                            <div class="text-brand-amber font-serif font-bold text-xl sm:text-2xl">Authentic</div>
+                            <div class="text-brand-muted text-xs">Clay Matka Steam</div>
+                        </div>
+                        <div>
+                            <div class="text-brand-amber font-serif font-bold text-xl sm:text-2xl">100% Fresh</div>
+                            <div class="text-brand-muted text-xs">Fast & Continental</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Right Image Showcase -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        
+                        <!-- Steam Animation overlay container -->
+                        <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-40 h-32 pointer-events-none z-20">
+                            <div class="steam-particle w-8 h-8 left-4 top-16"></div>
+                            <div class="steam-particle w-12 h-12 left-12 top-20" style="animation-delay: 0.8s;"></div>
+                            <div class="steam-particle w-10 h-10 right-6 top-14" style="animation-delay: 1.5s;"></div>
+                        </div>
+
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-brand-border p-2 bg-brand-card">
+                            <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=800" 
+                                 alt="Steaming Traditional Tandoori Chai in Clay Pot" 
+                                 class="w-full h-[420px] sm:h-[480px] object-cover rounded-2xl hover:scale-105 transition-transform duration-700">
+                            
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-transparent to-transparent"></div>
+
+                            <!-- Floating Badge -->
+                            <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-brand-dark/80 backdrop-blur-md border border-brand-border/80 flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-lg bg-brand-clay/20 border border-brand-clay/40 flex items-center justify-center text-brand-amber text-xl flex-shrink-0">
+                                    <i class="fa-solid fa-fire-burner"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-brand-cream font-serif font-semibold text-sm">Clay Pot Baked Chai</h4>
+                                    <p class="text-brand-muted text-xs mt-0.5">Infused with aromatic cardamom, saffron & roasted notes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="story" class="py-20 bg-brand-card relative border-t border-b border-brand-border/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Story Visual -->
+                <div class="relative group">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&q=80&w=600" alt="Chai Preparation" class="rounded-2xl h-64 w-full object-cover border border-brand-border shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=600" alt="Café Ambience" class="rounded-2xl h-64 w-full object-cover border border-brand-border shadow-lg mt-8">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 hidden sm:block bg-brand-dark border border-brand-copper/40 p-5 rounded-2xl shadow-2xl max-w-xs">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-heart text-brand-clay text-2xl"></i>
+                            <div>
+                                <p class="text-xs text-brand-muted uppercase font-semibold">Community Favorite</p>
+                                <p class="text-sm font-semibold text-brand-cream">Lahore's Go-To Evening Spot</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story Text -->
+                <div class="space-y-6">
+                    <div class="inline-flex items-center gap-2 text-brand-amber text-xs uppercase tracking-widest font-semibold">
+                        <span class="w-8 h-px bg-brand-amber"></span> Our Story
+                    </div>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-cream">
+                        Crafting Comfort & Connections in the Heart of Lahore
+                    </h2>
+                    <p class="text-brand-muted leading-relaxed text-sm sm:text-base">
+                        Situated on Mian Mehmood Ali Kasoori Road in Gulberg III, <strong class="text-brand-cream font-medium">Tandoori Tea & Co.</strong> was created to bring people together over authentic clay-pot chai and delicious comfort food.
+                    </p>
+                    <p class="text-brand-muted leading-relaxed text-sm sm:text-base">
+                        By combining the centuries-old tradition of baking tea in red-hot clay tandoors with a modern, high-energy café menu—ranging from Italian pastas and juicy burgers to spicy Chinese specialties—we offer a relaxed haven for students, families, and late-night tea enthusiasts alike.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 pt-2">
+                        <div class="p-4 rounded-xl bg-brand-dark/50 border border-brand-border">
+                            <i class="fa-solid fa-temperature-arrow-up text-brand-amber text-lg mb-2"></i>
+                            <h3 class="text-brand-cream font-semibold text-sm">Authentic Clay Tandoor</h3>
+                            <p class="text-brand-muted text-xs mt-1">Earthy, smoky flavor profiles baked to perfection.</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-brand-dark/50 border border-brand-border">
+                            <i class="fa-solid fa-utensils text-brand-amber text-lg mb-2"></i>
+                            <h3 class="text-brand-cream font-semibold text-sm">Diverse Dining</h3>
+                            <p class="text-brand-muted text-xs mt-1">From chai & parathas to Alfredo pasta & sizzlers.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="signature" class="py-20 bg-brand-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-brand-amber text-xs uppercase tracking-widest font-semibold block mb-2">The Artisanal Brew</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-cream">Signature Tandoori Chai Experience</h2>
+                <p class="text-brand-muted text-sm sm:text-base mt-3">Infused with real spices, slow-boiled milk, and poured into scalding clay kulhads for an unmatchable earthy aroma.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Signature Card 1 -->
+                <div class="bg-brand-card rounded-2xl p-6 border border-brand-border copper-border transition-all hover:-translate-y-1 relative group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-clay/15 flex items-center justify-center text-brand-amber text-2xl mb-5 group-hover:bg-brand-clay group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-brand-cream">Tandoori Cardamom Chai</h3>
+                    <p class="text-brand-muted text-xs sm:text-sm mt-2 leading-relaxed">
+                        Rich black tea infused with fragrant green cardamom pods, cooked in hot clay cups to lock in natural sweetness and aroma.
+                    </p>
+                    <div class="mt-6 flex items-center justify-between border-t border-brand-border/60 pt-4">
+                        <span class="text-xs text-brand-amber font-semibold">Signature Special</span>
+                        <a href="#menu" class="text-xs font-semibold text-brand-cream hover:text-brand-amber flex items-center gap-1">View in Menu <i class="fa-solid fa-angle-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Signature Card 2 -->
+                <div class="bg-brand-card rounded-2xl p-6 border border-brand-border copper-border transition-all hover:-translate-y-1 relative group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-clay/15 flex items-center justify-center text-brand-amber text-2xl mb-5 group-hover:bg-brand-clay group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-brand-cream">Tandoori Zafrani Chai</h3>
+                    <p class="text-brand-muted text-xs sm:text-sm mt-2 leading-relaxed">
+                        Premium saffron threads blended with creamy reduced milk and brewed over intense clay tandoor heat for a royal flavor.
+                    </p>
+                    <div class="mt-6 flex items-center justify-between border-t border-brand-border/60 pt-4">
+                        <span class="text-xs text-brand-amber font-semibold">Royal Blend</span>
+                        <a href="#menu" class="text-xs font-semibold text-brand-cream hover:text-brand-amber flex items-center gap-1">View in Menu <i class="fa-solid fa-angle-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Signature Card 3 -->
+                <div class="bg-brand-card rounded-2xl p-6 border border-brand-border copper-border transition-all hover:-translate-y-1 relative group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-clay/15 flex items-center justify-center text-brand-amber text-2xl mb-5 group-hover:bg-brand-clay group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-brand-cream">Tandoori Punjabi Chai</h3>
+                    <p class="text-brand-muted text-xs sm:text-sm mt-2 leading-relaxed">
+                        A robust, strong Karak-style brew with a rich malty body, boiled to perfection for tea purists seeking maximum strength.
+                    </p>
+                    <div class="mt-6 flex items-center justify-between border-t border-brand-border/60 pt-4">
+                        <span class="text-xs text-brand-amber font-semibold">Strong & Bold</span>
+                        <a href="#menu" class="text-xs font-semibold text-brand-cream hover:text-brand-amber flex items-center gap-1">View in Menu <i class="fa-solid fa-angle-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="py-20 bg-brand-card border-t border-brand-border/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+                <div>
+                    <span class="text-brand-amber text-xs uppercase tracking-widest font-semibold block mb-2">Explore Our Offerings</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-cream">Interactive Digital Menu</h2>
+                </div>
+
+                <!-- Live Search Bar -->
+                <div class="relative w-full md:w-80">
+                    <input type="text" id="menuSearch" placeholder="Search dishes (e.g. Alfredo, Zafrani...)" 
+                           class="w-full bg-brand-dark border border-brand-border focus:border-brand-clay rounded-xl px-4 py-3 pl-11 text-sm text-brand-cream placeholder-brand-muted outline-none transition-colors">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-brand-muted text-sm"></i>
+                </div>
+            </div>
+
+            <!-- Category Filter Horizontal Scroll Tabs -->
+            <div class="overflow-x-auto no-scrollbar pb-4 mb-8">
+                <div class="flex items-center gap-2 min-w-max" id="categoryTabs">
+                    <!-- Dynamic JavaScript Rendering Category Buttons -->
+                </div>
+            </div>
+
+            <!-- Menu Grid Container -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="menuGrid">
+                <!-- Dynamic Menu Cards Populated via JS -->
+            </div>
+
+            <div id="noResults" class="hidden text-center py-16">
+                <i class="fa-solid fa-utensils text-4xl text-brand-muted mb-3 block"></i>
+                <h3 class="text-brand-cream font-semibold text-lg">No dishes found matching your search</h3>
+                <p class="text-brand-muted text-sm mt-1">Try searching for something else or reset the category filter.</p>
+                <button onclick="resetMenuFilter()" class="mt-4 px-4 py-2 bg-brand-clay text-white text-xs font-semibold rounded-lg">Reset Filter</button>
+            </div>
+
+            <!-- Menu Notice -->
+            <div class="mt-12 p-4 rounded-xl bg-brand-dark/70 border border-brand-border/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-brand-muted">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-info text-brand-amber"></i>
+                    <span>Prices & availability are verified against Foodpanda listings. Third-party delivery fees may vary.</span>
+                </div>
+                <a href="https://www.foodpanda.pk/restaurant/w1zj/tandoori-tea-and-co" target="_blank" rel="noopener noreferrer" class="text-brand-amber font-semibold hover:underline flex-shrink-0">
+                    Order Directly on Foodpanda <i class="fa-solid fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="favourites" class="py-20 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-brand-amber text-xs uppercase tracking-widest font-semibold block mb-2">Guest Choices</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-cream">Popular Café Favourites</h2>
+                <p class="text-brand-muted text-sm sm:text-base mt-2">Highlights from our kitchen crafted for cravings big and small.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Favourite 1 -->
+                <div class="bg-brand-card rounded-2xl overflow-hidden border border-brand-border group hover:border-brand-clay/60 transition-all">
+                    <div class="h-52 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1645112411341-6c4fd023714a?auto=format&fit=crop&q=80&w=600" alt="Fettuccine Alfredo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-brand-dark/80 backdrop-blur-md border border-brand-border text-brand-amber text-xs font-semibold px-2.5 py-1 rounded-full">Italian</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-brand-cream">Fettuccine Alfredo Pasta</h3>
+                        <p class="text-brand-muted text-xs sm:text-sm mt-2 line-clamp-2">Rich parmesan cream sauce tossed with tender grilled chicken breast fillets and fresh herbs.</p>
+                        <div class="mt-4 pt-4 border-t border-brand-border/60 flex items-center justify-between">
+                            <span class="text-brand-amber font-bold text-sm">Verified Menu Item</span>
+                            <a href="#menu" class="text-xs text-brand-cream hover:text-brand-amber font-medium">Order Item →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Favourite 2 -->
+                <div class="bg-brand-card rounded-2xl overflow-hidden border border-brand-border group hover:border-brand-clay/60 transition-all">
+                    <div class="h-52 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&q=80&w=600" alt="Tuscan Chicken Sandwich" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-brand-dark/80 backdrop-blur-md border border-brand-border text-brand-amber text-xs font-semibold px-2.5 py-1 rounded-full">Sandwiches</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-brand-cream">Tuscan Chicken Sandwich</h3>
+                        <p class="text-brand-muted text-xs sm:text-sm mt-2 line-clamp-2">Pan-seared seasoned chicken, sun-dried tomatoes, pestos and melted cheese between artisanal bread.</p>
+                        <div class="mt-4 pt-4 border-t border-brand-border/60 flex items-center justify-between">
+                            <span class="text-brand-amber font-bold text-sm">Verified Menu Item</span>
+                            <a href="#menu" class="text-xs text-brand-cream hover:text-brand-amber font-medium">Order Item →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Favourite 3 -->
+                <div class="bg-brand-card rounded-2xl overflow-hidden border border-brand-border group hover:border-brand-clay/60 transition-all">
+                    <div class="h-52 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&q=80&w=600" alt="Dynamite Chicken" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-brand-dark/80 backdrop-blur-md border border-brand-border text-brand-amber text-xs font-semibold px-2.5 py-1 rounded-full">Starters</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-brand-cream">Dynamite Chicken</h3>
+                        <p class="text-brand-muted text-xs sm:text-sm mt-2 line-clamp-2">Crispy battered chicken bites tossed in a sweet, tangy, and spicy signature dynamite mayo glaze.</p>
+                        <div class="mt-4 pt-4 border-t border-brand-border/60 flex items-center justify-between">
+                            <span class="text-brand-amber font-bold text-sm">Verified Menu Item</span>
+                            <a href="#menu" class="text-xs text-brand-cream hover:text-brand-amber font-medium">Order Item →</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-20 bg-brand-card border-t border-brand-border/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-brand-amber text-xs uppercase tracking-widest font-semibold block mb-2">Visual Moments</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-cream">Food & Atmosphere Gallery</h2>
+            </div>
+
+            <!-- Gallery Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 mb-8" id="galleryFilters">
+                <button onclick="filterGallery('all')" class="gallery-btn active bg-brand-clay text-white text-xs font-semibold px-4 py-2 rounded-full transition-all">All</button>
+                <button onclick="filterGallery('tea')" class="gallery-btn bg-brand-dark hover:bg-brand-border text-brand-cream text-xs font-semibold px-4 py-2 rounded-full border border-brand-border transition-all">Tea & Beverages</button>
+                <button onclick="filterGallery('food')" class="gallery-btn bg-brand-dark hover:bg-brand-border text-brand-cream text-xs font-semibold px-4 py-2 rounded-full border border-brand-border transition-all">Main Meals</button>
+                <button onclick="filterGallery('ambience')" class="gallery-btn bg-brand-dark hover:bg-brand-border text-brand-cream text-xs font-semibold px-4 py-2 rounded-full border border-brand-border transition-all">Ambience</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="galleryGrid">
+                
+                <div class="gallery-item tea cursor-pointer group rounded-xl overflow-hidden h-60 relative border border-brand-border" onclick="openLightbox('https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=1200', 'Traditional Clay Pot Chai')">
+                    <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=600" alt="Clay Chai" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-solid fa-expand text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item food cursor-pointer group rounded-xl overflow-hidden h-60 relative border border-brand-border" onclick="openLightbox('https://images.unsplash.com/photo-1645112411341-6c4fd023714a?auto=format&fit=crop&q=80&w=1200', 'Fettuccine Alfredo Pasta')">
+                    <img src="https://images.unsplash.com/photo-1645112411341-6c4fd023714a?auto=format&fit=crop&q=80&w=600" alt="Pasta" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-solid fa-expand text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item ambience cursor-pointer group rounded-xl overflow-hidden h-60 relative border border-brand-border" onclick="openLightbox('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=1200', 'Cozy Café Ambience')">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=600" alt="Café Interior" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-solid fa-expand text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item food cursor-pointer group rounded-xl overflow-hidden h-60 relative border border-brand-border" onclick="openLightbox('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=1200', 'Gourmet Beef Burger')">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=600" alt="Burger" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-solid fa-expand text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item tea cursor-pointer group rounded-xl overflow-hidden h-60 relative border border-brand-border" onclick="openLightbox('https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=1200', 'Artisanal Coffee & Beverages')">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=600" alt="Coffee" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-solid fa-expand text-2xl"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item food cursor-pointer group rounded-xl overflow-hidden h-60 relative border border-brand-border" onclick="openLightbox('https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&q=80&w=1200', 'Spicy Chinese Chilli Chicken')">
+                    <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&q=80&w=600" alt="Chinese Food" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+                        <i class="fa-solid fa-expand text-2xl"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal Container -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl hover:text-brand-amber transition-colors">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="max-w-4xl w-full text-center">
+            <img id="lightboxImg" src="" alt="Gallery Lightbox" class="max-h-[80vh] mx-auto rounded-xl object-contain border border-brand-border">
+            <p id="lightboxCaption" class="text-brand-cream text-sm mt-4 font-serif"></p>
+        </div>
+    </div>
+
+    <section id="location" class="py-20 bg-brand-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid lg:grid-cols-12 gap-12">
+                
+                <!-- Contact & Info Left Column -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-brand-amber text-xs uppercase tracking-widest font-semibold block mb-2">Visit Us</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-cream">Location & Contact</h2>
+                        <p class="text-brand-muted text-sm mt-2">Drop by for an authentic tandoori tea experience or get in touch for inquiries.</p>
+                    </div>
+
+                    <!-- Verified Address Card -->
+                    <div class="p-6 rounded-2xl bg-brand-card border border-brand-border space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-clay/20 text-brand-amber flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-brand-cream font-semibold text-sm">Restaurant Address</h4>
+                                <p class="text-brand-muted text-xs sm:text-sm mt-1 leading-relaxed">
+                                    6-A3 Mian Mehmood Ali Kasoori Road, Block A-3, Gulberg III, Lahore, Punjab, Pakistan.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Quick Phone Contacts -->
+                        <div class="flex items-start gap-4 pt-2 border-t border-brand-border/60">
+                            <div class="w-10 h-10 rounded-xl bg-brand-clay/20 text-brand-amber flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-brand-cream font-semibold text-sm">Direct Phone Call</h4>
+                                <div class="flex flex-wrap gap-x-3 gap-y-1 mt-1 text-xs sm:text-sm">
+                                    <a href="tel:+923224735745" class="text-brand-amber hover:underline font-medium">0322 4735745</a>
+                                    <span class="text-brand-border">•</span>
+                                    <a href="tel:+923233339451" class="text-brand-muted hover:text-brand-cream">0323 3339451</a>
+                                    <span class="text-brand-border">•</span>
+                                    <a href="tel:+923048134095" class="text-brand-muted hover:text-brand-cream">0304 8134095</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex items-start gap-4 pt-2 border-t border-brand-border/60">
+                            <div class="w-10 h-10 rounded-xl bg-brand-clay/20 text-brand-amber flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-brand-cream font-semibold text-sm">Email Address</h4>
+                                <a href="mailto:tandooriteaandbar@gmail.com" class="text-brand-muted hover:text-brand-amber text-xs sm:text-sm mt-1 block">
+                                    tandooriteaandbar@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Opening Hours Component -->
+                    <div class="p-6 rounded-2xl bg-brand-card border border-brand-border">
+                        <div class="flex items-center justify-between mb-3">
+                            <h4 class="text-brand-cream font-semibold text-sm flex items-center gap-2">
+                                <i class="fa-clock text-brand-amber"></i> Operating Hours Notice
+                            </h4>
+                            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-brand-amber/20 text-brand-amber border border-brand-amber/30">
+                                Info Status
+                            </span>
+                        </div>
+                        <p class="text-brand-muted text-xs leading-relaxed">
+                            Opening hours vary on weekends and public holidays. Please contact the café directly via phone to confirm today's schedule.
+                        </p>
+                        <a href="tel:+923224735745" class="mt-4 w-full text-center py-2.5 rounded-lg text-xs font-semibold bg-brand-dark hover:bg-brand-border text-brand-cream border border-brand-border block transition-colors">
+                            <i class="fa-solid fa-headset mr-1 text-brand-amber"></i> Call Café for Today's Hours
+                        </a>
+                    </div>
+
+                    <!-- Social Action Buttons -->
+                    <div class="grid grid-cols-2 gap-3">
+                        <a href="https://www.instagram.com/tandooriteaco/" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl bg-brand-card border border-brand-border hover:border-brand-clay text-center text-xs font-semibold text-brand-cream flex items-center justify-center gap-2 transition-colors">
+                            <i class="fa-brands fa-instagram text-brand-amber text-base"></i> Instagram
+                        </a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Tandoori+Tea+%26+Co+6-A3+Mian+Mehmood+Ali+Kasoori+Road+Lahore" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl bg-brand-card border border-brand-border hover:border-brand-clay text-center text-xs font-semibold text-brand-cream flex items-center justify-center gap-2 transition-colors">
+                            <i class="fa-solid fa-diamond-turn-right text-brand-amber text-base"></i> Get Directions
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Contact & Map Form Right Column -->
+                <div class="lg:col-span-7 flex flex-col gap-6">
+                    
+                    <!-- Map Interactive Visual -->
+                    <div class="rounded-2xl overflow-hidden border border-brand-border bg-brand-card h-64 relative group">
+                        <iframe 
+                            title="Tandoori Tea & Co Gulberg Lahore Map Location"
+                            src="https://maps.google.com/maps?q=6-A3%20Mian%20Mehmood%20Ali%20Kasoori%20Road,%20Gulberg%20III,%20Lahore&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            class="w-full h-full border-0 filter grayscale contrast-125 opacity-80 group-hover:opacity-100 transition-opacity" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Tandoori+Tea+%26+Co+6-A3+Mian+Mehmood+Ali+Kasoori+Road+Lahore" 
+                           target="_blank" rel="noopener noreferrer"
+                           class="absolute bottom-4 right-4 bg-brand-dark/90 backdrop-blur-md px-4 py-2 rounded-lg border border-brand-border text-xs font-semibold text-brand-amber hover:bg-brand-clay hover:text-white transition-colors flex items-center gap-2">
+                            Open Full Google Maps <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+
+                    <!-- Interactive Customer Enquiry Form -->
+                    <div class="p-8 rounded-2xl bg-brand-card border border-brand-border">
+                        <h3 class="font-serif text-2xl font-bold text-brand-cream mb-2">Send an Enquiry</h3>
+                        <p class="text-brand-muted text-xs sm:text-sm mb-6">Have a question regarding group bookings, catering, or menu items? Send us a message.</p>
+                        
+                        <form id="enquiryForm" class="space-y-4" onsubmit="handleFormSubmit(event)">
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-medium text-brand-muted mb-1">Your Full Name *</label>
+                                    <input type="text" id="custName" required placeholder="e.g. Ali Ahmed" class="w-full bg-brand-dark border border-brand-border focus:border-brand-clay rounded-xl px-4 py-2.5 text-xs text-brand-cream placeholder-brand-muted outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-brand-muted mb-1">Phone / Mobile *</label>
+                                    <input type="tel" id="custPhone" required placeholder="e.g. 0300 1234567" class="w-full bg-brand-dark border border-brand-border focus:border-brand-clay rounded-xl px-4 py-2.5 text-xs text-brand-cream placeholder-brand-muted outline-none">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-medium text-brand-muted mb-1">Preferred Contact Method</label>
+                                <select id="custContactMethod" class="w-full bg-brand-dark border border-brand-border focus:border-brand-clay rounded-xl px-4 py-2.5 text-xs text-brand-cream outline-none">
+                                    <option value="WhatsApp">WhatsApp Message</option>
+                                    <option value="Phone Call">Direct Phone Call</option>
+                                    <option value="Email">Email Response</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-medium text-brand-muted mb-1">Your Message *</label>
+                                <textarea id="custMsg" required rows="3" placeholder="Tell us about your query or special request..." class="w-full bg-brand-dark border border-brand-border focus:border-brand-clay rounded-xl px-4 py-2.5 text-xs text-brand-cream placeholder-brand-muted outline-none resize-none"></textarea>
+                            </div>
+
+                            <div class="pt-2 flex flex-col sm:flex-row items-center gap-3">
+                                <button type="submit" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-brand-clay to-brand-copper hover:brightness-110 text-white font-semibold text-xs transition-all shadow-md">
+                                    Submit Enquiry Form
+                                </button>
+                                <button type="button" onclick="sendWhatsAppDirect()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-emerald-700/80 hover:bg-emerald-600 text-white font-semibold text-xs transition-all border border-emerald-500/30 flex items-center justify-center gap-2">
+                                    <i class="fa-brands fa-whatsapp text-sm"></i> Send via WhatsApp Directly
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- Success Alert Message -->
+                        <div id="formSuccessAlert" class="hidden mt-4 p-4 rounded-xl bg-emerald-950/60 border border-emerald-500/40 text-emerald-200 text-xs flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+                            <div>
+                                <strong>Enquiry Prepared!</strong> You can also connect directly over phone for immediate response.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark border-t border-brand-border/80 py-12 text-brand-muted text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-brand-clay flex items-center justify-center text-brand-dark font-serif font-bold text-sm">
+                        T
+                    </div>
+                    <span class="font-serif text-lg font-bold text-brand-cream">Tandoori Tea & Co.</span>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-6 text-brand-cream/80 font-medium">
+                    <a href="#home" class="hover:text-brand-amber">Home</a>
+                    <a href="#story" class="hover:text-brand-amber">Story</a>
+                    <a href="#menu" class="hover:text-brand-amber">Menu</a>
+                    <a href="#location" class="hover:text-brand-amber">Gulberg Location</a>
+                    <a href="https://www.foodpanda.pk/restaurant/w1zj/tandoori-tea-and-co" target="_blank" rel="noopener noreferrer" class="hover:text-brand-amber">Foodpanda</a>
+                </div>
+
+                <div class="flex items-center gap-4 text-base">
+                    <a href="https://www.instagram.com/tandooriteaco/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile" class="w-9 h-9 rounded-lg bg-brand-card border border-brand-border flex items-center justify-center text-brand-cream hover:text-brand-amber hover:border-brand-clay transition-all">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.foodpanda.pk/restaurant/w1zj/tandoori-tea-and-co" target="_blank" rel="noopener noreferrer" aria-label="Foodpanda Ordering" class="w-9 h-9 rounded-lg bg-brand-card border border-brand-border flex items-center justify-center text-brand-cream hover:text-brand-amber hover:border-brand-clay transition-all">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Business & Concept Disclaimer -->
+            <div class="border-t border-brand-border/40 pt-6 text-center max-w-3xl mx-auto space-y-2">
+                <p>
+                    6-A3 Mian Mehmood Ali Kasoori Road, Block A-3, Gulberg III, Lahore, Punjab, Pakistan.
+                </p>
+                <p class="text-[11px] text-brand-muted/70">
+                    Disclaimer: This website design is a client outreach concept showcasing publicly available business information for Tandoori Tea & Co.
+                </p>
+                <p class="text-[11px] text-brand-muted/50 pt-2">
+                    © 2026 Tandoori Tea & Co. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Verified Menu Dataset based on publicly listed items
+        const menuItems = [
+            // 1. Chai & Traditional Tea
+            { name: "Tandoori Cardamom Chai", category: "chai", price: "PKR 280", tag: "Signature", desc: "Aromatic cardamom infused tea baked in hot clay pot.", img: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=400" },
+            { name: "Tandoori Punjabi Chai", category: "chai", price: "PKR 280", tag: "Strong", desc: "Robust, full-bodied malty tea with tandoor baked fragrance.", img: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&q=80&w=400" },
+            { name: "Tandoori Zafrani Chai", category: "chai", price: "PKR 380", tag: "Royal", desc: "Pure saffron threads infused in creamy slow-cooked tea.", img: "https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&q=80&w=400" },
+            { name: "Masala Chai", category: "chai", price: "PKR 250", tag: "Spiced", desc: "Traditional brew spiced with cinnamon, cloves and cardamom.", img: "https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?auto=format&fit=crop&q=80&w=400" },
+            { name: "Doodh Pati", category: "chai", price: "PKR 260", tag: "Rich", desc: "Classic rich milk tea boiled without water.", img: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=400" },
+            { name: "Karak Chai", category: "chai", price: "PKR 240", tag: "Popular", desc: "Strongly brewed tea with condensed milk richness.", img: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&q=80&w=400" },
+            { name: "Pista Chai", category: "chai", price: "PKR 350", tag: "Nutty", desc: "Garnished with crushed pistachios and warm spices.", img: "https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&q=80&w=400" },
+
+            // 2. Coffee & Hot Beverages
+            { name: "Tandoori Coffee", category: "coffee", price: "PKR 390", tag: "Hot", desc: "Frothy espresso infused with smoky clay tandoor warmth.", img: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=400" },
+
+            // 3. Chillers & Shakes
+            { name: "Mint Margarita", category: "chillers", price: "Contact for Price", tag: "Chilled", desc: "Refreshing blended lime juice with crushed ice and fresh mint.", img: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=400" },
+
+            // 4. Starters & Snacks
+            { name: "Dynamite Chicken", category: "starters", price: "PKR 790", tag: "Spicy", desc: "Crispy chicken tossed in sweet and tangy dynamite sauce.", img: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&q=80&w=400" },
+            { name: "Chicken Fingers", category: "starters", price: "PKR 650", tag: "Crispy", desc: "Golden fried chicken strips served with honey mustard dip.", img: "https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&q=80&w=400" },
+            { name: "Hot Cheetos Bites", category: "starters", price: "PKR 690", tag: "Hot", desc: "Cheese stuffed chicken bites coated in crunchy Cheetos crumbs.", img: "https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&q=80&w=400" },
+            { name: "Chicken Tacos", category: "starters", price: "PKR 750", tag: "Mexican", desc: "Tortilla shells stuffed with seasoned chicken and fresh salsa.", img: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&q=80&w=400" },
+
+            // 5. Sandwiches & Wraps
+            { name: "Tuscan Chicken Sandwich", category: "sandwiches", price: "PKR 850", tag: "Popular", desc: "Grilled chicken fillet with sun-dried tomato pesto and cheese.", img: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&q=80&w=400" },
+
+            // 6. Burgers
+            { name: "Gourmet Beef Burger", category: "burgers", price: "Contact for Price", tag: "Juicy", desc: "Smashed beef patty topped with melted cheddar and house sauce.", img: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=400" },
+
+            // 7. Pizza
+            { name: "Artisanal Cheese Pizza", category: "pizza", price: "Contact for Price", tag: "Baked", desc: "Mozzarella and fresh basil on house-made tomato crust.", img: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=400" },
+
+            // 8. Pasta & Italian
+            { name: "Fettuccine Alfredo Pasta", category: "pasta", price: "PKR 1050", tag: "Chef Special", desc: "Creamy parmesan Alfredo sauce tossed with tender grilled chicken.", img: "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?auto=format&fit=crop&q=80&w=400" },
+            { name: "Penne Arrabiata", category: "pasta", price: "PKR 920", tag: "Spicy", desc: "Penne pasta in spicy garlic tomato marinara with basil.", img: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&q=80&w=400" },
+            { name: "Mac & Cheese", category: "pasta", price: "PKR 850", tag: "Comfort", desc: "Classic elbow macaroni baked in rich three-cheese sauce.", img: "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&q=80&w=400" },
+            { name: "Classic Lasagna", category: "pasta", price: "PKR 1150", tag: "Baked", desc: "Layered pasta sheets with savory meat sauce and melted cheese.", img: "https://images.unsplash.com/photo-1574894709920-11b28e7367e3?auto=format&fit=crop&q=80&w=400" },
+
+            // 9. Chinese Cuisine
+            { name: "Cashew Nuts Chicken", category: "chinese", price: "PKR 980", tag: "Chinese", desc: "Stir-fried chicken cubes with toasted cashews and bell peppers.", img: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&q=80&w=400" },
+            { name: "Kung Pao Chicken", category: "chinese", price: "PKR 980", tag: "Spicy", desc: "Diced chicken wok-tossed with peanuts, chili and spicy sauce.", img: "https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&q=80&w=400" },
+            { name: "Mongolian Chicken", category: "chinese", price: "PKR 990", tag: "Savoury", desc: "Crispy chicken strips coated in sweet garlic soy glaze.", img: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&q=80&w=400" },
+            { name: "Chicken Chilli Dry", category: "chinese", price: "PKR 950", tag: "Hot", desc: "Sliced chicken tossed with green chilies, onions and dark soy.", img: "https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&q=80&w=400" },
+
+            // 10. Main Course
+            { name: "Tarragon Chicken with Rice", category: "mains", price: "PKR 1080", tag: "Continental", desc: "Pan-seared chicken topped with velvety French tarragon sauce.", img: "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&q=80&w=400" },
+            { name: "Chilli Garlic Prawn", category: "mains", price: "PKR 1350", tag: "Seafood", desc: "Juicy prawns sautéed in hot garlic chili sauce with herb rice.", img: "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&q=80&w=400" }
+        ];
+
+        const categories = [
+            { id: "all", label: "All Items" },
+            { id: "chai", label: "Chai & Traditional Tea" },
+            { id: "coffee", label: "Coffee & Hot Drinks" },
+            { id: "starters", label: "Starters & Snacks" },
+            { id: "sandwiches", label: "Sandwiches & Wraps" },
+            { id: "burgers", label: "Burgers" },
+            { id: "pasta", label: "Pasta & Italian" },
+            { id: "chinese", label: "Chinese Cuisine" },
+            { id: "mains", label: "Main Course" },
+            { id: "pizza", label: "Pizza" },
+            { id: "chillers", label: "Chillers & Shakes" }
+        ];
+
+        let activeCategory = "all";
+
+        // Initialize Page Interactions on Load
+        window.onload = function() {
+            renderCategoryTabs();
+            renderMenuGrid();
+
+            // Setup Mobile Menu Toggle
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            const drawer = document.getElementById('mobileDrawer');
+            
+            mobileBtn.addEventListener('click', () => {
+                drawer.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when clicking links
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => drawer.classList.add('hidden'));
+            });
+
+            // Setup Live Menu Search Listener
+            document.getElementById('menuSearch').addEventListener('input', (e) => {
+                renderMenuGrid(e.target.value.toLowerCase());
+            });
+        };
+
+        // Render Category Tabs
+        function renderCategoryTabs() {
+            const container = document.getElementById('categoryTabs');
+            container.innerHTML = categories.map(cat => `
+                <button onclick="setCategory('${cat.id}')" 
+                        class="px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all border ${
+                            activeCategory === cat.id 
+                            ? 'bg-brand-clay text-white border-brand-clay shadow-md' 
+                            : 'bg-brand-dark text-brand-muted border-brand-border hover:border-brand-clay/50 hover:text-brand-cream'
+                        }">
+                    ${cat.label}
+                </button>
+            `).join('');
+        }
+
+        // Set Active Category Filter
+        function setCategory(catId) {
+            activeCategory = catId;
+            renderCategoryTabs();
+            renderMenuGrid(document.getElementById('menuSearch').value.toLowerCase());
+        }
+
+        // Reset Filter Action
+        function resetMenuFilter() {
+            activeCategory = 'all';
+            document.getElementById('menuSearch').value = '';
+            renderCategoryTabs();
+            renderMenuGrid();
+        }
+
+        // Render Menu Cards
+        function renderMenuGrid(searchQuery = "") {
+            const grid = document.getElementById('menuGrid');
+            const noRes = document.getElementById('noResults');
+
+            const filtered = menuItems.filter(item => {
+                const matchesCat = activeCategory === "all" || item.category === activeCategory;
+                const matchesSearch = item.name.toLowerCase().includes(searchQuery) || 
+                                      item.desc.toLowerCase().includes(searchQuery);
+                return matchesCat && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = "";
+                noRes.classList.remove('hidden');
+                return;
+            } else {
+                noRes.classList.add('hidden');
+            }
+
+            grid.innerHTML = filtered.map(item => `
+                <div class="bg-brand-dark/80 rounded-2xl overflow-hidden border border-brand-border hover:border-brand-clay/60 transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="h-44 overflow-hidden relative">
+                            <img src="${item.img}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-brand-dark/80 backdrop-blur-md text-brand-amber text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full border border-brand-border">
+                                ${item.tag}
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-serif font-bold text-base text-brand-cream group-hover:text-brand-amber transition-colors">${item.name}</h3>
+                            <p class="text-brand-muted text-xs mt-1.5 leading-relaxed line-clamp-2">${item.desc}</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0 border-t border-brand-border/40 mt-2 flex items-center justify-between">
+                        <span class="text-brand-amber font-semibold text-xs">${item.price}</span>
+                        <a href="https://www.foodpanda.pk/restaurant/w1zj/tandoori-tea-and-co" target="_blank" rel="noopener noreferrer" class="text-[11px] font-semibold text-brand-cream hover:text-brand-clay transition-colors flex items-center gap-1">
+                            Order <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Gallery Lightbox Functions
+        function openLightbox(imgSrc, caption) {
+            document.getElementById('lightboxImg').src = imgSrc;
+            document.getElementById('lightboxCaption').innerText = caption;
+            document.getElementById('lightboxModal').classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightboxModal').classList.add('hidden');
+        }
+
+        // Gallery Category Filtering
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const btns = document.querySelectorAll('.gallery-btn');
+
+            btns.forEach(btn => {
+                btn.classList.remove('bg-brand-clay', 'text-white');
+                btn.classList.add('bg-brand-dark', 'text-brand-cream');
+            });
+
+            event.target.classList.remove('bg-brand-dark', 'text-brand-cream');
+            event.target.classList.add('bg-brand-clay', 'text-white');
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Form Submit Simulation
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            document.getElementById('formSuccessAlert').classList.remove('hidden');
+            setTimeout(() => {
+                document.getElementById('enquiryForm').reset();
+            }, 1000);
+        }
+
+        // Direct WhatsApp Helper
+        function sendWhatsAppDirect() {
+            const name = document.getElementById('custName').value || "Guest";
+            const msg = document.getElementById('custMsg').value || "Hello, I have an enquiry regarding Tandoori Tea & Co.";
+            const phone = "923224735745"; // Direct restaurant contact
+            
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent('Name: ' + name + '\nMessage: ' + msg)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
